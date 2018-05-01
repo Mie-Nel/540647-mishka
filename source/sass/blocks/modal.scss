@@ -1,0 +1,128 @@
+.modal {
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  opacity: 0.8;
+}
+
+.modal__item {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  width: 320px;
+  margin-top: -174px;
+  margin-left: -160px;
+  padding: 32px 30px;
+  background-color: #ffffff;
+  border: 1px solid #c7c7c7;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+
+  @media (min-width: $tablet-width) {
+    width: 567px;
+    margin-left: -283px;
+  }
+}
+
+.modal__title {
+  width: 150px;
+  margin: 0 auto;
+  margin-bottom: 11px;
+
+  @include font(25px, 30px, 700);
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 370px;
+
+    @include font(30px, 57px, 700);
+    margin-bottom: 15px;
+  }
+}
+
+.modal__text {
+  margin: 0;
+  margin-bottom: 21px;
+
+  @include font(15px, 30px, 400);
+  color: $color-grey;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include font(17px, 30px, 400);
+  }
+}
+
+.modal__form {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    width: 350px;
+    margin: 0 auto;
+  }
+}
+
+.modal-field {
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin-right: 8px;
+  margin-bottom: 33px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.modal-field__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 53px;
+  border: 2px solid #ececec;
+
+  @include font(15px, 16px, 400);
+  color: $color-grey;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 2px solid #c7c7c7;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font(17px, 16px, 400);
+  }
+}
+
+.modal__btn {
+  width: 100%;
+  color: #ffffff;
+  background-color: $color-green;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-darkGreen;
+  }
+}
+
+.modal-field__input:checked + .modal-field__label {
+  border: 2px solid $color-green;
+}
