@@ -1,0 +1,146 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+
+  @include box(320px, 27px 30px);
+
+  @media (min-width: $tablet-width) {
+    @include box(768px, 127px 50px);
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include min-box(1100px, 1150px, 126px 50px);
+    padding-left: 225px;
+    background-position: 50px 55px;
+  }
+}
+
+.reviews__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  @include font(25px, 30px, 700);
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+    flex-basis: 50%;
+    margin-bottom: 47px;
+
+    @include font(43px, 50px, 700);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(53px, 57px, 700);
+  }
+}
+
+.reviews__content {
+  margin: 0;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 120px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 35px;
+  }
+}
+
+.reviews__text {
+  margin: 0;
+
+  @include font(15px, 30px, 400);
+  color: $color-grey;
+
+  @media (min-width: $tablet-width) {
+    @include font(17px, 30px, 400);
+  }
+}
+
+.reviews__author {
+  @include font(17px, 30px, 700);
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    width: 334px;
+
+    @include font(18px, 30px, 700);
+  }
+}
+
+.reviews__mail {
+  display: block;
+
+  @include font(17px, 30px, 400);
+  font-style: normal;
+}
+
+.reviews__toggles {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-top: -55px;
+    margin-left: auto;
+  }
+}
+
+.reviews__toggle {
+  width: 130px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+    cursor: default;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+    height: 59px;
+    border: none;
+  }
+}
+
+.reviews__toggle--prev {
+  background-image: url("../img/icon-left-arrow.svg");
+}
+
+.reviews__toggle--next {
+  background-image: url("../img/icon-right-arrow.svg");
+}
+
+.reviews__btn {
+  order: 2;
+  margin-top: 38px;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+    align-self: baseline;
+    min-width: 175px;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,233 @@
+.main-nav {
+  width: 100%;
+  background-color: #ffffff;
+
+  &--opened .main-nav__btn {
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      background-color: $color-black;
+      width: 20px;
+      height: 2px;
+      box-shadow: none;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--closed .main-nav__item:not(.main-nav__item--logo) {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+
+  // при отключении js
+
+  &--no-js {
+    position: static;
+  }
+
+  &--no-js .main-nav__item {
+    display: block;
+  }
+
+  &--no-js .main-nav__btn {
+    display: none;
+  }
+}
+
+.main-nav__btn {
+  position: absolute;
+  right: 30px;
+  top: 29px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: $color-black;
+    box-shadow: 0 6px 0 0 $color-black, 0 12px 0 0 $color-black;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+  }
+}
+
+.main-nav__item {
+  &--logo {
+    @media (min-width: $tablet-width) {
+      order: -3;
+      flex-basis: 42%;
+      flex-grow: 1;
+      padding-top: 25px;
+      padding-bottom: 20px;
+      padding-left: 50px;
+      border-bottom: 1px solid #e7e7e7;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 1;
+      flex-basis: 20%;
+      padding-left: 0;
+      text-align: center;
+      border-bottom: none;
+    }
+  }
+
+  &--catalog {
+    @media (min-width: $tablet-width) {
+      order: 2;
+      flex-grow: 0;
+      padding-top: 19px;
+      padding-bottom: 10px;
+      padding-left: 50px;
+      background-color: #fafafa;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 0;
+      flex-basis: 20%;
+      padding-top: 31px;
+      padding-left: 50px;
+      background-color: #ffffff;
+    }
+  }
+
+  &--knitting {
+    @media (min-width: $tablet-width) {
+      order: 2;
+      flex-grow: 1;
+      padding-top: 19px;
+      padding-bottom: 10px;
+      padding-left: 36px;
+      background-color: #fafafa;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 0;
+      flex-grow: 0;
+      flex-basis: 20%;
+      padding-top: 31px;
+      padding-left: 39px;
+      background-color: #ffffff;
+      border-left: 1px solid #e7e7e7;
+    }
+  }
+
+  &--search {
+    @media (min-width: $tablet-width) {
+      order: -2;
+      flex-basis: 85px;
+      border: 1px solid #e7e7e7;
+      border-top: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 2;
+      border-bottom: none;
+    }
+  }
+
+  &--basket {
+    @media (min-width: $tablet-width) {
+      order: -1;
+      flex-basis: 41%;
+      padding-top: 31px;
+      padding-right: 50px;
+      text-align: right;
+      border-bottom: 1px solid #e7e7e7;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 2;
+      flex-basis: 27%;
+      padding-right: 50px;
+      border-bottom: none;
+    }
+  }
+}
+
+.main-nav__link {
+  display: block;
+
+  @include font(17px, 24px, 700);
+  color: #000000;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 27px;
+    padding-left: 73px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  &--logo {
+    @media (max-width: $mobile-width-only) {
+      padding: 19px 0;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font(15px, 24px, 700);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(17px, 24px, 700);
+  }
+
+  &--search {
+    @media (min-width: $tablet-width) {
+      font-size: 0;
+    }
+  }
+
+  &--basket {
+    @media (min-width: $tablet-width) {
+      @include font(17px, 24px, 700);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.secondary-nav {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.secondary-nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.secondary-nav__link {
+  display: block;
+  margin-top: 20px;
+  margin-right: 62px;
+
+  @include font(15px, 24px, 700);
+  color: $color-black;
+}

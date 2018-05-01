@@ -1,0 +1,47 @@
+.form__wrapper {
+  @media (min-width: $tablet-width) {
+    background-color: #f1f1f1;
+  }
+}
+
+.form__item {
+  @include box(320px, 0 30px);
+  padding-bottom: 55px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 768px;
+    padding: 0 50px;
+    padding-bottom: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.form__note {
+  display: block;
+  margin-bottom: 30px;
+
+  @include font(14px, 16px, 400);
+  color: $color-grey;
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+
+    @include font(17px, 30px, 400);
+  }
+}
+
+.form__btn {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+  }
+}

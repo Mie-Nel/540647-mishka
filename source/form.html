@@ -2,49 +2,69 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
+
+
+    <style>
+      html {
+        background: url( "preview/mishka-form-mobile.jpg" ) 50% 0 no-repeat;
+      }
+
+      @media (min-width: 768px) {
+        html {
+          background: url( "preview/mishka-form-tablet.jpg" ) 50% 0 no-repeat;
+        }
+      }
+
+      @media (min-width: 1150px) {
+        html {
+          background: url( "preview/mishka-form-desktop.jpg" ) 50% 0 no-repeat;
+        }
+      }
+
+      body {
+        opacity: 0.5;
+      }
+    </style>
+
+
   <body>
     <header class="page-header">
       <div class="page-header__inner">
-        <div class="page-header__logo logo">
-          <a class="logo__link" href="index.html">
-            <img class="logo__img" src="" width="" height="" alt="Логотип Mishka">
-          </a>
-        </div>
-        <nav class="page-header__main-nav main-nav">
+        <nav class="page-header__main-nav main-nav main-nav--no-js">
           <button class="main-nav__btn" type="button" aria-label="открыть меню"></button>
-          <div class="main-nav__inner">
-            <ul class="main-nav__list main-nav-site">
-              <li class="main-nav__item main-nav__item--top">
-                <a class="main-nav__link main-nav__link--top">
-                  <img class="main-nav__logo" src="" width="" height="" alt="Логотип Mishka">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--logo">
+              <div class="main-nav__link main-nav__link--logo logo">
+                <a class="logo__link">
+                  <img class="logo__img" href="index.html" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Mishka">
                 </a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link">Вязание на заказ</a>
-              </li>
-            </ul>
-            <ul class="main-nav__list main-nav-user">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="#">Поиск по сайту</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="#">Корзина:
-                  <span>пока пуста</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+            <li class="main-nav__item main-nav__item--catalog">
+              <a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-nav__item main-nav__item--knitting">
+              <a class="main-nav__link main-nav__link--knitting" href="form.html">Вязание на заказ</a>
+            </li>
+            <li class="main-nav__item main-nav__item--search">
+              <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+            </li>
+            <li class="main-nav__item main-nav__item--basket">
+              <a class="main-nav__link main-nav__link--basket" href="#">Корзина:
+                <span>пока пуста</span>
+              </a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
     <main class="page-main">
       <section class="features">
-        <div class="features__inner">
+        <div class="features__inner features__inner--page-inner">
           <nav class="secondary-nav">
             <ul class="secondary-nav__list">
               <li class="secondary-nav__item">
@@ -56,86 +76,88 @@
             </ul>
           </nav>
           <span class="features__note">Бесплатная доставка по России</span>
+          <h2 class="features__title features__title--page-inner">Вязание на заказ</h2>
         </div>
-        <h2 class="features__title">Вязание на заказ</h2>
       </section>
       <section class="order-form">
-        <p class="order-form__slogan"></p>
+        <p class="order-form__slogan">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form action="post" class="form">
-          <fieldset class="form-group">
-            <legend class="form-group__title">
-              <span>ТИП</span>
-            </legend>
+          <div class="form-group form-group--radio">
+            <p class="form-group__title">
+              <span class="form-group__name">ТИП</span>
+            </p>
             <ul class="form-group__list" role="none">
               <li class="form-group__item">
                 <label class="field-radio">
-                  <input class="field-radio__input" type="radio" name="type" value="accessory">
-                  <span class="field-radio__label">Аксессуар для интерьера</span>
+                  <input class="field-radio__input visually-hidden" type="radio" name="type" value="accessory" checked>
+                  <span class="field-radio__label" tabindex="0">Аксессуар для интерьера</span>
                 </label>
               </li>
               <li class="form-group__item">
                 <label class="field-radio">
-                  <input class="field-radio__input" type="radio" name="type" value="toy">
-                  <span class="field-radio__label">Детская игрушка</span>
+                  <input class="field-radio__input visually-hidden" type="radio" name="type" value="toy">
+                  <span class="field-radio__label" tabindex="0">Детская игрушка</span>
                 </label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="form-group">
-            <legend class="form-group__title">
-              <span>Цвет</span>
-            </legend>
+          </div>
+          <div class="form__wrapper">
+            <div class="form-group form-group--checkbox">
+              <p class="form-group__title">
+                <span class="form-group__name">Цвет</span>
+              </p>
+              <ul class="form-group__list form-group__list--checkbox" role="none">
+                <li class="form-group__item form-group__item--checkbox">
+                  <label class="field-checkbox">
+                    <input class="field-checkbox__input visually-hidden" type="checkbox" name="white">
+                    <span class="field-checkbox__label" tabindex="0">Белый</span>
+                  </label>
+                </li>
+                <li class="form-group__item form-group__item--checkbox">
+                  <label class="field-checkbox">
+                    <input class="field-checkbox__input visually-hidden" type="checkbox" name="grey">
+                    <span class="field-checkbox__label" tabindex="0">Серый</span>
+                  </label>
+                </li>
+                <li class="form-group__item form-group__item--checkbox">
+                  <label class="field-checkbox">
+                    <input class="field-checkbox__input visually-hidden" type="checkbox" name="tiffany">
+                    <span class="field-checkbox__label" tabindex="0">«Тиффани»</span>
+                  </label>
+                </li>
+                <li class="form-group__item form-group__item--checkbox">
+                  <label class="field-checkbox">
+                    <input class="field-checkbox__input visually-hidden" type="checkbox" name="black">
+                    <span class="field-checkbox__label" tabindex="0">Черный</span>
+                  </label>
+                </li>
+                <li class="form-group__item form-group__item--checkbox">
+                  <label class="field-checkbox">
+                    <input class="field-checkbox__input visually-hidden" type="checkbox" name="pink">
+                    <span class="field-checkbox__label" tabindex="0">Розовый</span>
+                  </label>
+                </li>
+                <li class="form-group__item form-group__item--checkbox">
+                  <label class="field-checkbox">
+                    <input class="field-checkbox__input visually-hidden" type="checkbox" name="orange">
+                    <span class="field-checkbox__label" tabindex="0">Оранжевый</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-group form-group--text">
+            <p class="form-group__title form-group__title--text">
+              <span class="form-group__name">ФИО</span>
+            </p>
             <ul class="form-group__list" role="none">
-              <li class="form-group__item">
-                <label class="field-checkbox">
-                  <input class="field-checkbox__input" type="checkbox" name="white">
-                  <span class="field-checkbox__label">Белый</span>
-                </label>
-              </li>
-              <li class="form-group__item">
-                <label class="field-checkbox">
-                  <input class="field-checkbox__input" type="checkbox" name="grey">
-                  <span class="field-checkbox__label">Серый</span>
-                </label>
-              </li>
-              <li class="form-group__item">
-                <label class="field-checkbox">
-                  <input class="field-checkbox__input" type="checkbox" name="tiffany">
-                  <span class="field-checkbox__label">«Тиффани»</span>
-                </label>
-              </li>
-              <li class="form-group__item">
-                <label class="field-checkbox">
-                  <input class="field-checkbox__input" type="checkbox" name="black">
-                  <span class="field-checkbox__label">Черный</span>
-                </label>
-              </li>
-              <li class="form-group__item">
-                <label class="field-checkbox">
-                  <input class="field-checkbox__input" type="checkbox" name="pink">
-                  <span class="field-checkbox__label">Розовый</span>
-                </label>
-              </li>
-              <li class="form-group__item">
-                <label class="field-checkbox">
-                  <input class="field-checkbox__input" type="checkbox" name="orange">
-                  <span class="field-checkbox__label">Оранжевый</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="form-group">
-            <legend class="form-group__title">
-              <span>ФИО</span>
-            </legend>
-            <ul class="form-group__list" role="none">
-              <li class="form-group__item">
+              <li class="form-group__item form-group__item--text">
                 <label class="field-text">
                   <span class="field-text__label">Имя:</span>
                   <input class="field-text__input" type="text" name="name" placeholder="Введите ваше имя*">
                 </label>
               </li>
-              <li class="form-group__item">
+              <li class="form-group__item form-group__item--text">
                 <label class="field-text">
                   <span class="field-text__label">Фамилия:</span>
                   <input class="field-text__input" type="text" name="surname" placeholder="Укажите фамилию*">
@@ -148,39 +170,49 @@
                 </label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="form-group">
-            <p class="form-group__title">ТЕЛ</p>
-            <div class="form-group__item">
-              <label class="field-text">
-                <input class="field-text__input" type="tel" name="phone" placeholder="+7 ХХХ ХХ ХХ*">
-              </label>
+          </div>
+          <div class="form__wrapper">
+            <div class="form-group form-group--mix">
+              <p class="form-group__title form-group__title--mix">
+                <span class="form-group__name">ТЕЛ</span>
+              </p>
+              <div class="form-group__item form-group__item--mix">
+                <label class="field-text">
+                  <input class="field-text__input field-text__input--mix" type="tel" name="phone" placeholder="+7 ХХХ ХХ ХХ*">
+                </label>
+              </div>
+              <p class="form-group__title form-group__title--mix">
+                <span class="form-group__name">E-mail</span>
+              </p>
+              <div class="form-group__item form-group__item--mix">
+                <label class="field-text">
+                  <input class="field-text__input field-text__input--mix" type="email" name="email" placeholder="Ваш Email*">
+                </label>
+              </div>
             </div>
-            <p class="form-group__title">E-mail</p>
-            <div class="form-group__item">
-              <label class="field-text">
-                <input class="field-text__input" type="email" name="email" placeholder="Ваш Email*">
-              </label>
-            </div>
-          </fieldset>
-          <div class="form-group">
-            <p class="form-group__title">ДОП</p>
+          </div>
+          <div class="form-group form-group--textarea">
+            <p class="form-group__title form-group__title--textarea">
+              <span class="form-group__name">ДОП</span>
+            </p>
             <div class="form-group__item">
               <label class="field-textarea">
                 <textarea class="field-textarea__input" name="order" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </label>
             </div>
           </div>
-          <span class="form__note">*Поля обязательны для заполнения</span>
-          <button class="form__btn btn" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+          <div class="form__item">
+            <span class="form__note">*Поля обязательны для заполнения</span>
+            <button class="form__btn button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+          </div>
         </form>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__inner">
-        <div class="page-footer__logo logo">
-          <a class="logo__link">
-            <img class="logo__img" src="" width="" height="" alt="Логотип Mishka">
+        <div class="page-footer__logo">
+          <a class="page-footer__link">
+            <img class="page-footer__img" src="" width="" height="" alt="Логотип Mishka">
           </a>
         </div>
         <div class="page-footer__socials socials">
@@ -202,5 +234,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/main-nav.js"></script>
   </body>
 </html>
