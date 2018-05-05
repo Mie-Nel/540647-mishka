@@ -8,7 +8,7 @@
 
 
 
-    <style>
+<!--     <style>
       html {
         background: url( "preview/mishka-form-mobile.jpg" ) 50% 0 no-repeat;
       }
@@ -28,7 +28,7 @@
       body {
         opacity: 0.5;
       }
-    </style>
+    </style> -->
 
   </head>
   <body>
@@ -39,8 +39,12 @@
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--logo">
               <div class="main-nav__link main-nav__link--logo logo">
-                <a class="logo__link">
-                  <img class="logo__img" href="index.html" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Mishka">
+                <a class="logo__link" href="index.html">
+                  <picture>
+                    <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                    <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Магазин товаров для дома Mishka">
+                  </picture>
                 </a>
               </div>
             </li>

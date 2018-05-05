@@ -3,6 +3,8 @@
 
   @media (min-width: $tablet-width) {
     @include box(768px, 30px 50px);
+    padding-top: 76px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {
@@ -10,7 +12,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @include min-box(1100px, 1150px, 160px 50px);
+    @include min-box(1100px, 1150px, 127px 50px);
     padding-bottom: 0;
   }
 }

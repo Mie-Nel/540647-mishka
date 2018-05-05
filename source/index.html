@@ -44,7 +44,11 @@
             <li class="main-nav__item main-nav__item--logo">
               <div class="main-nav__link main-nav__link--logo logo">
                 <a class="logo__link">
-                  <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Mishka">
+                  <picture>
+                    <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                    <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Магазин товаров для дома Mishka">
+                  </picture>
                 </a>
               </div>
             </li>
@@ -80,7 +84,7 @@
             </ul>
           </nav>
           <span class="features__note">Бесплатная доставка по России</span>
-          <h1 class="features__title">Милые штуки ручной работы&nbspдля&nbspдома</h1>
+          <h1 class="features__title">Милые штуки ручной работы&nbsp;для дома</h1>
         </div>
         <ul class="features__list">
           <li class="features__item">
@@ -121,7 +125,11 @@
           <p class="product__price">Цена: 990 руб.</p>
           <a class="product__link button" href="#">ЗАКАЗАТЬ</a>
         </div>
-        <img class="product__img" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="вязаные корзинки">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+          <img class="product__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="вязаные корзинки">
+        </picture>
       </section>
       <section class="description">
         <h3 class="description__title">Коротко о нас:</h3>
@@ -177,12 +185,17 @@
           </div>
           <div class="contacts__item">
             <span class="contacts__label">адрес:</span>
-            <p class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная, д.&nbsp19/8,&nbspофис 101</p>
+            <p class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная, д.&nbsp;19/8,&nbsp;офис 101</p>
           </div>
         </div>
         <a class="contacts__btn button" href="writeus.html">Нaпишите нам</a>
-        <div class="contacts__map">
-          <img class="contacts__img" src="img/map-mobile@1x.jpg" width="350" height="457" alt="Схема проезда">
+        <div class="contacts__map contacts__map--no-js">
+          <iframe class="contacts__iframe" src="https://yandex.ru/map-widget/v1/-/CBqvYXQB2D" width="320" height="457" frameborder="0"></iframe>
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="contacts__img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="350" height="457" alt="Схема проезда">
+          </picture>
         </div>
       </section>
     </main>
@@ -239,7 +252,8 @@
     <!-- Modal -->
 
     <script src="js/main-nav.js"></script>
-    <script src="js/modal.js"></script>
+    <script src="js/modal-index.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>
