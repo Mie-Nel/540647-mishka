@@ -73,9 +73,9 @@ gulp.task("html", function () {
 });
 
 
-gulp.task("build", function (done) {
-  run("style", "sprite", "html", done);
-});
+// gulp.task("build", function (done) {
+//   run("style", "sprite", "html", done);
+// });
 
 gulp.task("copy", function () {
   return gulp.src([
