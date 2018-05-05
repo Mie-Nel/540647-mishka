@@ -1,6 +1,7 @@
 var modal = document.querySelector(".modal");
 var orderBtn = document.querySelector(".product__link");
 var modalClose = document.querySelector(".modal__overlay");
+var cardLink = document.querySelector(".card__order-link");
 
 orderBtn.addEventListener("click", function(evt) {
   evt.preventDefault();
