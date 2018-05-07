@@ -73,6 +73,7 @@
 .card__link {
   @include font(17px, 24px, 700);
   color: $color-black;
+  outline: none;
 
   &:hover,
   &:focus {
@@ -149,6 +150,19 @@
 .card__order-link {
   width: 20px;
   height: 20px;
-  border: 2px solid red;
   cursor: pointer;
+}
+
+.card__order__icon {
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    fill: $color-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

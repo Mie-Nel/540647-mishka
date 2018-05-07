@@ -28,6 +28,24 @@
   }
 }
 
+.page-footer__link {
+  cursor: pointer;
+  outline: none;
+
+  &:hover .page-footer__icon,
+  &:focus .page-footer__icon {
+    fill: $color-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .page-footer__socials {
   border-bottom: 1px solid #e5e5e5;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
 }

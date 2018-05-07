@@ -66,3 +66,11 @@
 .field-radio__input:checked + .field-radio__label::after {
   display: block;
 }
+
+.field-radio__input:disabled + .field-radio__label::after {
+  opacity: 0.2;
+}
+
+.field-radio__input:disabled + .field-radio__label::before  {
+  border: 2px solid #ececec;
+}

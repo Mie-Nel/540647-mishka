@@ -31,7 +31,7 @@
     }
   }
 
-  // при отключении js
+  // без js
 
   &--no-js {
     position: static;
@@ -202,6 +202,7 @@
 }
 
 .main-nav__link {
+  position: relative;
   display: block;
   outline: none;
 
@@ -211,6 +212,12 @@
   &[href]:hover,
   &[href]:focus {
     opacity: 0.6;
+  }
+
+  &[href]:hover .main-nav__icon,
+  &[href]:focus .main-nav__icon {
+    opacity: 1;
+    fill: $color-green;
   }
 
   &[href]:active {
@@ -247,5 +254,30 @@
     @media (min-width: $tablet-width) {
       @include font(17px, 24px, 700);
     }
+  }
+}
+
+.main-nav__icon {
+  position: absolute;
+  opacity: 0.2;
+
+  &--cart {
+    @media (max-width: $mobile-width-only) {
+      top: 31px;
+      left: 33px;
+    }
+
+    top: 2px;
+    left: -53px;
+  }
+
+  &--search {
+    @media (max-width: $mobile-width-only) {
+      top: 30px;
+      left: 31px;
+    }
+
+    top: 5px;
+    left: 36px;
   }
 }

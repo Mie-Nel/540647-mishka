@@ -36,7 +36,7 @@
     left: 6px;
     width: 27px;
     height: 23px;
-    background-image: url("../img/icon-tick.svg");
+    background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
@@ -66,3 +66,12 @@
 .field-checkbox__input:checked + .field-checkbox__label::after {
   display: block;
 }
+
+.field-checkbox__input:disabled + .field-checkbox__label::after {
+  opacity: 0.2;
+}
+
+.field-checkbox__input:disabled + .field-checkbox__label::before  {
+  border: 2px solid #ececec;
+}
+

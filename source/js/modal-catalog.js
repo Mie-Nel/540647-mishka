@@ -1,12 +1,15 @@
 var modal = document.querySelector(".modal");
 var modalClose = document.querySelector(".modal__overlay");
-var cardLink = document.querySelector(".card__order-link");
+var cardLink = document.querySelectorAll(".card__order-link");
 
-cardLink.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  modal.classList.remove("modal--closed");
-  modal.classList.add("modal--opened");
-});
+if ( cardLink && modal ) {
+  for (var i = 0; i < cardLink.length; i++) {
+    cardLink[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modal.classList.add("modal--opened");
+    });
+  }
+}
 
 modalClose.addEventListener("click", function () {
   modal.classList.remove("modal--opened");

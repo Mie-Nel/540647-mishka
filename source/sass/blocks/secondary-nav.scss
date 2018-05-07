@@ -17,7 +17,17 @@
   display: block;
   margin-top: 15px;
   margin-right: 62px;
+  outline: none;
 
   @include font(15px, 24px, 700);
   color: $color-black;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
