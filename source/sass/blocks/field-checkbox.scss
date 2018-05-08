@@ -71,7 +71,6 @@
   opacity: 0.2;
 }
 
-.field-checkbox__input:disabled + .field-checkbox__label::before  {
+.field-checkbox__input:disabled + .field-checkbox__label::before {
   border: 2px solid #ececec;
 }
-

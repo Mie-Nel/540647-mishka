@@ -40,7 +40,7 @@
     border-bottom: 2px solid $color-green;
   }
 
-  &:hover  + .field-text__icon,
+  &:hover + .field-text__icon,
   &:focus + .field-text__icon {
     opacity: 1;
     fill: $color-green;
