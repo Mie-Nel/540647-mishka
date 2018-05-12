@@ -9,7 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center;
 
     @include box(768px, 0 50px);
     min-height: 140px;
@@ -25,6 +25,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    padding-top: 50px;
   }
 }
 
