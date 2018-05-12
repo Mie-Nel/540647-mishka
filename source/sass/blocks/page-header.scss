@@ -7,12 +7,10 @@
 .page-header__inner {
   @media (max-width: $mobile-width-only) {
     @include box(320px, 0);
-    min-height: 80px;
   }
 
   @media (min-width: $tablet-width) {
     @include box(768px, 0);
-    min-height: 90px;
   }
 
   @media (min-width: $desktop-width) {

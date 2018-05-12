@@ -4,6 +4,8 @@
   text-align: center;
   border: 2px solid $color-grey;
   font-family: $font-family;
+  outline: none;
+  cursor: pointer;
 
   @include font(17px, 24px, 700);
   color: $color-grey;

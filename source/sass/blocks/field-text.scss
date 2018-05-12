@@ -1,9 +1,12 @@
 .field-text {
+  position: relative;
   outline: none;
 
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: baseline;
+
+    min-height: 60px;
   }
 }
 
@@ -37,8 +40,23 @@
     border-bottom: 2px solid $color-green;
   }
 
+  &:hover + .field-text__icon,
+  &:focus + .field-text__icon {
+    opacity: 1;
+    fill: $color-green;
+  }
+
   &:active {
     border-bottom: 2px solid $color-green;
+  }
+
+  &:active + .field-text__icon {
+    opacity: 1;
+    fill: $color-green;
+  }
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.3);
   }
 
   @media (min-width: $tablet-width) {
@@ -49,5 +67,23 @@
     &--mix {
       background-color: #f1f1f1;
     }
+  }
+}
+
+.field-text__icon {
+  position: absolute;
+  top: -4px;
+  right: 6px;
+  fill: $color-grey;
+  opacity: 0.2;
+
+  @media (min-width: $tablet-width) {
+    top: 17px;
+    right: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 20px;
+    right: 6px;
   }
 }

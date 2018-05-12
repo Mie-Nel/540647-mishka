@@ -1,32 +1,35 @@
 .description {
   @include box(320px, 37px 30px);
-  padding-bottom: 0;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     @include box(768px, 65px 50px);
     max-width: 960px;
-    padding-bottom: 0;
+    padding-bottom: 26px;
   }
 
   @media (min-width: $desktop-width) {
     @include min-box(1100px, 1150px, 104px 50px);
-    padding-bottom: 0;
+    padding-bottom: 33px;
     padding-left: 175px;
   }
 }
 
 .description__title {
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 31px;
 
   @include font(25px, 30px, 700);
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 55px;
+
     @include font(43px, 50px, 700);
   }
 
   @media (min-width: $desktop-width) {
     padding-left: 43px;
+    padding-bottom: 50px;
 
     @include font(53px, 57px, 700);
   }
@@ -44,67 +47,25 @@
 }
 
 .description__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100px;
-  margin-bottom: 21px;
+  position: relative;
+  margin-bottom: 30px;
+  padding-top: 54px;
 
   @include font(17px, 20px, 700);
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media (min-width: $tablet-width) {
     width: 304px;
-    margin-bottom: 35px;
+    margin-bottom: 57px;
 
     @include font(20px, 22px, 700);
-  }
 
-  &::before {
-    content: "";
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 22px;
-
-    @media (min-width: $tablet-width) {
-      margin-top: 25px;
+    &:nth-child(3) {
+      margin-bottom: 0;
     }
-  }
-
-  &--icon-flower::before {
-    width: 32px;
-    height: 37px;
-    background-image: url("../img/icon-feature-flower.svg");
-    background-position: 0 0;
-  }
-
-  &--icon-price::before {
-    width: 47px;
-    height: 27px;
-    background-image: url("../img/icon-feature-money.svg");
-  }
-
-  &--icon-like::before {
-    width: 33px;
-    height: 28px;
-    background-image: url("../img/icon-feature-heart.svg");
-  }
-
-  &--icon-knitting::before {
-    width: 34px;
-    height: 34px;
-    background-image: url("../img/icon-feature-ball.svg");
-  }
-
-  &--icon-rocket::before {
-    width: 54px;
-    height: 23px;
-    background-image: url("../img/icon-feature-rocket.svg");
-  }
-
-  &--icon-gift::before {
-    width: 33px;
-    height: 28px;
-    background-image: url("../img/icon-feature-gift.svg");
   }
 
   @media (min-width: $tablet-width) {
@@ -148,5 +109,33 @@
     &--icon-price {
       margin-left: 50px;
     }
+  }
+}
+
+.description__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: $color-green;
+
+  &--flower {
+    left: 8px;
+  }
+
+  &--like {
+    top: 4px;
+    left: 8px;
+  }
+
+  &--knitting {
+    left: 3px;
+  }
+
+  &--rocket {
+    left: -6px;
+  }
+
+  &--gift {
+    left: 3px;
   }
 }

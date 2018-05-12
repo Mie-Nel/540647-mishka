@@ -95,6 +95,7 @@
   align-items: center;
   min-height: 53px;
   border: 2px solid #ececec;
+  outline: none;
 
   @include font(15px, 16px, 400);
   color: $color-grey;
@@ -125,4 +126,8 @@
 
 .modal-field__input:checked + .modal-field__label {
   border: 2px solid $color-green;
+}
+
+.modal-field__input:disabled + .modal-field__label {
+  opacity: 0.2;
 }

@@ -2,6 +2,10 @@
   position: relative;
   background-color: #f9f9f9;
 
+  &--page-inner {
+    background-color: #f1f1f1;
+  }
+
   @media (min-width: $tablet-width) {
     &::after {
       content: "";
@@ -22,7 +26,7 @@
       width: 100%;
       height: 34px;
       background-image: url("../img/bg-zigzag-fill.svg");
-      background-size: 1150px 34px;
+      background-size: 1250px 34px;
     }
   }
 }
@@ -32,7 +36,6 @@
 
   @include box(320px, 0 30px);
   min-height: 282px;
-  background-color: #f9f9f9;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -19px;
@@ -44,7 +47,7 @@
 
   @media (min-width: $tablet-width) {
     @include box(768px, 0 50px);
-    min-height: 568px;
+    min-height: 566px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center -58px;
 
@@ -56,19 +59,20 @@
 
   @media (min-width: $desktop-width) {
     @include min-box(1100px, 1150px, 0 50px);
-    min-height: 624px;
+    min-height: 626px;
     background-image: url("../img/hero-desktop@1x.jpg");
     background-position: center top;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
-      background-size: cover auto;
+      background-size: cover;
     }
   }
 
   &--page-inner {
     min-height: 176px;
     background-image: none;
+    background-color: #f1f1f1;
 
     @media (min-width: $tablet-width) {
       min-height: 170px;
@@ -86,13 +90,13 @@
   @media (min-width: $tablet-width) {
     display: block;
     position: absolute;
-    top: -40px;
+    top: -43px;
     right: 50px;
     color: $color-grey;
   }
 
   @media (min-width: $desktop-width) {
-    top: 15px;
+    top: 17px;
     right: 50px;
   }
 }
@@ -123,12 +127,12 @@
 
   &--page-inner {
     @media (min-width: $tablet-width) {
-      padding-top: 38px;
+      padding-top: 34px;
       padding-bottom: 70px;
     }
 
     @media (min-width: $desktop-width) {
-      padding-top: 51px;
+      padding-top: 53px;
     }
   }
 }
@@ -167,6 +171,7 @@
   width: 100%;
   padding: 21px 30px;
   cursor: pointer;
+  outline: none;
 
   @include font(19px, 24px, 700);
   color: #ffffff;
@@ -177,7 +182,8 @@
 
     @include font(20px, 30px, 700);
 
-    &:hover {
+    &:hover,
+    &:focus {
       transform: translateY(-5px);
     }
   }
@@ -190,7 +196,7 @@
       display: inline-block;
       width: 40px;
       height: 60px;
-      background-image: url("../img/icon-interior.svg");
+      background-image: url("../img/interior.svg");
       opacity: 0.15;
     }
 
@@ -213,7 +219,7 @@
       display: inline-block;
       width: 60px;
       height: 60px;
-      background-image: url("../img/icon-toy.svg");
+      background-image: url("../img/toy.svg");
       opacity: 0.15;
     }
 
