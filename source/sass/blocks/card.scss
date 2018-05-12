@@ -72,6 +72,7 @@
 
 .card__link {
   display: block;
+
   @include font(17px, 24px, 700);
   color: $color-black;
   outline: none;
