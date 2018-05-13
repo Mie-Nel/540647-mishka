@@ -1,25 +1,24 @@
 .socials__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   min-width: 260px;
   min-height: 80px;
   margin: 0;
-  padding: 0 40px;
-  padding-top: 28px;
+  padding: 0 56px;
+  padding-top: 19px;
   padding-bottom: 14px;
   list-style: none;
 
   @media (min-width: $tablet-width) {
     min-width: 335px;
-    padding-left: 116px;
+    padding-left: 135px;
     padding-top: 59px;
   }
 }
 
 .socials__item {
-  margin-right: 42px;
+  margin-right: 41px;
   margin-bottom: 3px;
 
   &:last-child {

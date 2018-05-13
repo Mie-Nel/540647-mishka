@@ -1,6 +1,6 @@
 .card {
   width: 260px;
-  margin-bottom: 33px;
+  margin-bottom: 32px;
   border: 1px solid #ececec;
 
   &:last-child {
@@ -52,6 +52,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  min-height: 177px;
   padding: 27px 27px;
   padding-bottom: 0;
 
@@ -62,12 +63,17 @@
   @media (min-width: $desktop-width) {
     width: 315px;
     min-height: 198px;
+    padding-right: 33px;
   }
 }
 
 .card__title {
   margin: 0;
   margin-bottom: 5px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 13px;
+  }
 }
 
 .card__link {
@@ -93,7 +99,7 @@
 
 .card__info {
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 
   @include font(13px, 30px, 400);
   color: $color-grey;
@@ -105,7 +111,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 50px;
     line-height: 15px;
   }
 }
@@ -135,7 +140,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      top: -27px;
+      top: -20px;
       left: -2px;
       width: 260px;
     }
@@ -152,7 +157,7 @@
   @include font(15px, 24px, 700);
 
   @media (min-width: $tablet-width) {
-    @include font(17px, 24px, 700);
+    @include font(17px, 31px, 700);
   }
 }
 

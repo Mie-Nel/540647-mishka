@@ -1,4 +1,5 @@
 .production {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 260px;
@@ -25,11 +26,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    box-sizing: content-box;
+    display: block;
     width: 1050px;
-    height: 455px;
     margin-top: 55px;
-    margin-bottom: 100px;
+    margin-bottom: 104px;
     padding: 0;
   }
 }
@@ -37,7 +37,7 @@
 .production__title {
   position: relative;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
   padding-left: 89px;
 
   @include font(17px, 24px, 700);
@@ -59,7 +59,7 @@
 
     @media (min-width: $desktop-width) {
       top: 39px;
-      left: 78px;
+      left: 73px;
     }
   }
 
@@ -73,8 +73,9 @@
   @media (min-width: $desktop-width) {
     box-sizing: border-box;
     width: 360px;
-    padding-left: 76px;
-    padding-right: 50px;
+    margin-left: auto;
+    padding-left: 72px;
+    padding-right: 55px;
     padding-top: 95px;
   }
 }
@@ -98,8 +99,9 @@
   @media (min-width: $desktop-width) {
     box-sizing: border-box;
     width: 360px;
+    margin-left: auto;
     margin-bottom: 44px;
-    padding-left: 76px;
+    padding-left: 71px;
     padding-right: 50px;
   }
 }
@@ -114,9 +116,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 214px;
+    width: 229px;
     margin: 0;
-    margin-left: 78px;
+    margin-left: auto;
+    margin-right: 57px;
+    margin-bottom: 60px;
   }
 }
 
@@ -144,6 +148,12 @@
       top: 186px;
       left: 290px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &:hover::after,

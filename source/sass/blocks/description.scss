@@ -3,7 +3,7 @@
   padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    @include box(768px, 65px 50px);
+    @include box(768px, 70px 50px);
     max-width: 960px;
     padding-bottom: 26px;
   }
@@ -22,7 +22,7 @@
   @include font(25px, 30px, 700);
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 55px;
+    padding-bottom: 50px;
 
     @include font(43px, 50px, 700);
   }
@@ -57,6 +57,30 @@
     margin-bottom: 0;
   }
 
+  &--icon-flower {
+    padding-right: 65px;
+  }
+
+  &--icon-price {
+    padding-right: 60px;
+  }
+
+  &--icon-like {
+    padding-right: 60px;
+  }
+
+  &--icon-knitting {
+    padding-right: 47px;
+  }
+
+  &--icon-rocket {
+    padding-right: 0;
+  }
+
+  &--icon-gift {
+    padding-right: 17px;
+  }
+
   @media (min-width: $tablet-width) {
     width: 304px;
     margin-bottom: 57px;
@@ -71,6 +95,7 @@
   @media (min-width: $tablet-width) {
     &--icon-flower {
       order: 0;
+      padding-right: 80px;
     }
 
     &--icon-price {
@@ -79,6 +104,7 @@
 
     &--icon-like {
       order: 5;
+      padding-right: 80px;
     }
 
     &--icon-knitting {

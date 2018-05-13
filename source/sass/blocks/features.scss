@@ -200,6 +200,15 @@
       opacity: 0.15;
     }
 
+    &:hover::after,
+    &:focus::after {
+      opacity: 0.3;
+    }
+
+    &:active::after {
+      opacity: 0.1;
+    }
+
     &:hover,
     &:focus {
       background-color: #59d5bc;
@@ -221,6 +230,15 @@
       height: 60px;
       background-image: url("../img/toy.svg");
       opacity: 0.15;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 0.3;
+    }
+
+    &:active::after {
+      opacity: 0.1;
     }
 
     &:hover,

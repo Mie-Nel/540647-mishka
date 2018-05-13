@@ -1,22 +1,28 @@
 .copyright {
-  display: flex;
-  justify-content: center;
   min-height: 80px;
   min-width: 185px;
   padding: 0 37px;
-  padding-top: 25px;
+  padding-top: 22px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    padding-top: 63px;
+    padding-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-top: 57px;
   }
 }
 
 .copyright__text {
+  display: inline-block;
+  vertical-align: top;
   margin: 0;
-  margin-right: 30px;
+  margin-right: 25px;
+  color: $color-black;
 
-  @include font(19px, 18px, 700);
+  @include font(19px, 26px, 700);
 }
 
 .copyright__link {
